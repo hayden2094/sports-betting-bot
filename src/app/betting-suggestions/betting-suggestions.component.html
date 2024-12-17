@@ -1,0 +1,11 @@
+<div *ngIf="suggestions.length > 0">
+  <h2>Best Betting Suggestions</h2>
+  <div *ngFor="let suggestion of suggestions">
+    <div>
+      <strong>{{ suggestion.event }}</strong>: {{ suggestion.betType }} - Odds: {{ suggestion.odds }}
+    </div>
+  </div>
+</div>
+<div *ngIf="suggestions.length === 0">
+  <p>No suggestions available at the moment.</p>
+</div>
